@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<!-- <base src="http://localhost:8080/simpleboot/"/>  -->
+
+<head>
+<title>登录</title>
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="" />
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="../resource/css/easyui.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/icon.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/login.css">
+<script data-main="../resource/script/login-notsafe"
+	src="../resource/script/require.js"></script>
+<script src="../resource/script/require-config.js"></script>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+			<div id="dlg1" class="easyui-dialog bg"
+				style="display:block;padding:20px 6px;width:80%;"
+				data-options="modal:false,closed:false,closable:false,title:'登录'">
+				<form id="ff" method="post">
+					<div class="input">
+						<label for="userCode">用户名：</label> <input value="admin"
+							class="easyui-textbox" required="required" type="text"
+							id="userCode" name="userCode" prompt="用户名"
+							style="float: left;width:70%;height:30px">
+					</div>
+					<div class="input">
+						<label for="password">密码：</label> <input value="lhy123456"
+							class="easyui-textbox" required="required" id="password"
+							type="password" name="password" prompt="密码"
+							style="float: left;width:70%;height:30px">
+					</div>
+					<div style="margin: 20px;">
+						<a id="submit" href="javascript:void(0);"
+							class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+							style="width:50%;height:35px;float: left;">登&nbsp;陆</a> <a
+							id="clear" href="javascript:void(0)" class="easyui-linkbutton"
+							data-options="iconCls:'icon-clear'"
+							style="width:50%;height:35px;float: left;">重&nbsp;置</a>
+					</div>
+				</form>
+			</div>
+</body>
+</html>

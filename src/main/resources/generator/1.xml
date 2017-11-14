@@ -1,0 +1,9 @@
+
+INSERT INTO TEST_BAK
+<trim prefix="(" suffix=")" suffixOverrides=",">B_NAME,B_DESC,</trim>
+<trim prefix="VALUES(" suffix=")" suffixOverrides=",">
+	<if test="bName != null">#{bName,javaType=java.lang.Integer},</if>
+	<if test="bName == null">T_ZZFW_YYFA_BJ_SEQUENCE.nextval ,</if>
+	<if test="bDesc != null">#{bDesc,javaType=java.lang.String},</if>
+	<if test="bDesc == null">#{bDesc,javaType=java.lang.String},</if>
+</trim>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="resources/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    	$(function(){
+    		//getAll
+//     		$.ajax({
+//     			type:'get',
+//     			url:'/api/users',
+//     			success : function(data) {
+//     				$("body").html(JSON.stringify(data));
+//     			},
+//     			error : function(e) {
+//     				debugger;
+//     				$("body").html(e.responseText);
+//     			}
+    			
+//     		});
+    		
+    		//get
+    		$.ajax({
+    			type:'get',
+    			url:'/api/users/admin3',
+    			dataType:'json',
+    			success : function(data) {
+    				$("body").html(JSON.stringify(data));
+    			},
+    			error : function(e) {
+    				debugger;
+    				$("body").html(e.responseText);
+    			}
+    			
+    		});
+    		
+    		//delete
+//     		$.ajax({
+//     			type:'post',
+//     			url:'/api/users/admin1',
+//     			data: {
+//     				_method:'DELETE',
+//     			},
+//     			success : function(data) {
+//     				$("body").html(JSON.stringify(data));
+//     			},
+//     			error : function(e) {
+//     				debugger;
+//     				$("body").html(e.responseText);
+//     			}
+    			
+//     		});
+    		
+//     		$.ajax({
+//     			type:'post',
+//     			url:'/api/users',
+//     			data: {
+//     				'userCode':'admin4',
+//     				_method:'PUT',
+//     				'pwd':'123456'
+//     			},
+// 				success : function(data) {
+//     				$("body").html("ok");
+//     			},
+//     			error : function(e) {
+//     				debugger;
+//     				$("body").html(e.responseText);
+//     			}
+    			
+//     		});
+    		
+    		
+//     		    var data ={"userCode":"admin3","userName":"管理员2","pwd":"lhy123456","phoneNumber":"18114015057","userType":"-1","createTime":"2016-09-02 23:10:21","remarks":""}
+//     		$.ajax({
+//     			type:'post',
+//     			url:'/api/users',
+//     			contentType:"application/json",
+//     			data: JSON.stringify(data),
+// 				success : function(data) {
+//     				$("body").html(data);
+//     			},
+//     			error : function(e) {
+//     				debugger;
+//     				$("body").html(e.responseText);
+//     			}
+    			
+//     		});
+    	});
+    </script>
+  </head>
+  
+  <body>
+    This is my HTML page. 1<br>
+  </body>
+</html>

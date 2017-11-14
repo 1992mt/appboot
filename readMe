@@ -1,0 +1,15 @@
+-------------------------------手机APP-----------------------------
+1.上传学习心得（word文档或者输入框，保存服务器）
+2.点击查看个人相关的心得（可对自己的心得实现增，删，改）
+3.手机查看心得，并可提出建议，包括文字和图片
+4.留一个管理员权限，以便做心得的控制（防止不合格的心得存在）
+
+
+执行命令：mybatis-generator:generate
+cmd: mvn mybatis-generator:generate
+
+http://blog.csdn.net/catoop/article/details/50520958
+http://www.cnblogs.com/hlhdidi/p/6376457.html
+http://blog.csdn.net/win7system/article/details/51037700
+http://www.cnblogs.com/zr520/archive/2015/12/01/5009790.html
+http://blog.csdn.net/chris_mao/article/details/49288251

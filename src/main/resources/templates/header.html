@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+				<!--顶部-->
+		  <header data-am-widget="header"
+          class="am-header am-header-default">
+      <div class="am-header-left am-header-nav">
+      <!-- 返回首页(心得详情页) -->
+          <a href="logout" class="" th:if="${session.user}">
+                <i class="am-header-icon am-icon-home"></i>
+          </a>
+      </div>
+
+      <h1 class="am-header-title">
+          <a href="#title-link" class="" th:text="${session.sessionTitle}">
+           <!--  ${title} -->
+            <!-- <span th:text="${session.sessionTitle}"></span> -->
+          </a>
+      </h1>
+
+      <div class="am-header-right am-header-nav">
+          <a href="#right-link" class="">
+                <i class="am-header-icon am-icon-bars"></i>
+          </a>
+      </div>
+      
+<!--      <button class="am-btn am-btn-primary" data-am-collapse="{target: '#collapse-nav'}">Menu </button>
+		<nav>
+		  <ul id="collapse-nav" class="am-nav am-collapse">
+		    <li><a href="">关于</a></li>
+		    
+		  </ul>
+		</nav>
+      -->
+      
+      
+  </header>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.common.mapper.ExperienceCustomMapper">
+	<select id="listExperience" parameterType="java.lang.String"
+		resultType="com.app.common.model.response.ExperienceResponse">
+		SELECT
+		tu.username,
+		te.addtime,
+		te.content,
+		te.fileurl,
+		te.id,
+		te.updatetime,
+		te.user_id AS userId
+		FROM
+		t_experience te,
+		t_user tu
+		WHERE
+		te.user_id = tu.id
+		<if test="userId != null and userId != ''">
+			AND te.user_id = #{userId}
+		</if>
+		ORDER BY
+		te.addtime DESC
+	</select>
+</mapper>

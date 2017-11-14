@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title></title>
+		<style type="text/css">
+			* {
+			    margin: 0;
+			    padding: 0;
+			    border:0;
+			}
+			.commentClass{
+				float:right;
+			}
+		</style>
+		<script src="./js/jquery.min.js" type="text/javascript"></script>
+		<script src="./js/common.js" type="text/javascript"></script>
+		<script src="./js/include.js" type="text/javascript"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="./js/amazeui.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="./css/amazeui.min.css"/>
+		<script type="text/javascript">
+			//通过config接口注入权限验证配置
+		/* 	wx.config({
+			    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			    appId: '', // 必填，公众号的唯一标识
+			    timestamp: '<?php echo time();?>', // 必填，生成签名的时间戳
+			    nonceStr: '<?php echo $nonceStr;?>', // 必填，生成签名的随机串
+			    signature: '<?php echo $signature;?>',// 必填，签名
+			    jsApiList: [] // 必填，需要使用的JS接口列表
+			});
+			//通过ready接口处理成功验证
+			wx.ready(function(){
+				// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后
+			}); */
+		
+			$(function($) {
+				searchExperience();
+				});
+		</script>
+	</head>
+	<body>
+		<!--顶部-->
+
+	<!--底栏-->
+    <include src="./header"></include>
+	<!--内容-->
+	<input id="usernameId" type="hidden" th:value="${session.user.username}"/>
+	<input id="manageId" type="hidden" th:value="${session.manage}"/>
+	 <input id="userId" type="hidden" th:value="${userId}"/>
+	<div class="am-list-news-bd">
+  <ul class="am-list">
+
+      <li class="am-g am-list-item-desced">
+          <a href="http://www.douban.com/online/11614662/" class="am-list-item-hd ">我很囧，你保重....晒晒旅行中的那些囧！</a>
+
+
+          <div class="am-list-item-text">囧人囧事囧照，人在囧途，越囧越萌。标记《带你出发，陪我回家》http://book.douban.com/subject/25711202/为“想读”“在读”或“读过”，有机会获得此书本活动进行3个月，每月送出三本书。会有不定期bonus！</div>
+
+      </li>
+      <li class="am-g am-list-item-desced">
+          <a href="http://www.douban.com/online/11624755/" class="am-list-item-hd ">我最喜欢的一张画</a>
+
+
+          <div class="am-list-item-text">你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片美我最喜欢的画群296795413进群发画，少说多发图，</div>
+
+      </li>
+      <li class="am-g">
+          <a href="http://www.douban.com/online/11645411/" class="am-list-item-hd ">“你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
+      </li>
+  </ul>
+  </div>
+  <!-- 删除提示confirm -->
+  <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">删除心得</div>
+    <div class="am-modal-bd">
+      你，确定要删除这条记录吗？
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+    </div>
+  </div>
+</div>
+
+<!-- 评论提示prompt -->
+<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">我来评论</div>
+    <div class="am-modal-bd">
+      来来来，吐槽点啥吧
+      <input type="text" class="am-modal-prompt-input">
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+    </div>
+  </div>
+</div>
+
+			<!--底栏-->
+    <include src="./footer"></include>
+  
+  
+  </div>
+
+    
+</div>
+	</body>
+</html>
