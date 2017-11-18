@@ -56,11 +56,11 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("lhy boot quick API")//大标题
+            .title("appboot quick API")//大标题
             .description("集成了 mybatis，druid，ehcache，shiro，test，以及热部署和远程调试的spring boot starter，方便快速开发web应用")//详细描述
             .version("1.0")//版本
             .termsOfServiceUrl("NO terms of service")
-            .contact(new Contact("尼罗河的赠礼", "http://www.haoyuqin.com", "250985725@qq.com"))//作者
+            .contact(new Contact("appboot", "#", "#"))//作者
             .license("The Apache License, Version 2.0")
             .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
             .build();

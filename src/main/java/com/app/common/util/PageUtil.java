@@ -11,12 +11,9 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
 /**
- * 
- * @ClassName: PageUtil
- * @Description: 转化分页对象 ，后续通过注解配置
- * @author luanhy
- * @date 2017年7月7日 下午5:23:57
- * @Copyright: Copyright (c) 2017 wisedu
+ * 分页工具
+ * @author mt
+ *
  */
 public class PageUtil {
 
